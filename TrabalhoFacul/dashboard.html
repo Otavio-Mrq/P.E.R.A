@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard - P.E.R.A</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="d-flex">
+        <aside class="sidebar d-flex flex-column">
+            <div class="p-4 text-center border-bottom">
+                <h3 class="text-success fw-bold mb-0">
+                    <i class="bi bi-apple"></i> P.E.R.A
+                </h3>
+                <small class="text-muted" style="font-size: 0.7rem;">Gestão Agrícola</small>
+            </div>
+            <nav class="nav flex-column mt-3 flex-grow-1" id="menu-lateral">
+                <a href="dashboard.html" class="nav-link nav-item-custom active"><i class="bi bi-grid-1x2"></i> Dashboard</a>
+                <a href="vitrine.html" class="nav-link nav-item-custom"><i class="bi bi-shop"></i> Vitrine</a>
+                <a href="estoque.html" class="nav-link nav-item-custom"><i class="bi bi-box-seam"></i> Meu Estoque</a>
+                <a href="novo-lote.html" class="nav-link nav-item-custom"><i class="bi bi-plus-circle"></i> Novo Lote</a>
+                <a href="retiradas.html" class="nav-link nav-item-custom"><i class="bi bi-check-circle"></i> Retiradas</a>
+                <a href="endereco.html" class="nav-link nav-item-custom"><i class="bi bi-geo-alt"></i> Meu Endereço</a>
+            </nav>
+            <div class="p-3 border-top mt-auto">
+                <a href="login.html" class="btn btn-outline-danger w-100 text-start border-0">
+                    <i class="bi bi-box-arrow-left me-2"></i> Sair do Sistema
+                </a>
+            </div>
+        </aside>
+
+        <main class="flex-grow-1 p-4 bg-light">
+            <div class="d-flex justify-content-end align-items-center mb-4">
+                <button class="btn btn-light btn-sm rounded-circle p-2 shadow-sm me-3" id="btn-dark-mode">
+                    <i class="bi bi-moon-fill"></i>
+                </button>
+                <div class="bg-white border border-success text-success rounded-circle d-flex align-items-center justify-content-center fw-bold" style="width: 40px; height: 40px; font-size: 0.9rem;">
+                    OM
+                </div>
+            </div>
+
+            <div class="mb-4">
+                <h2 class="fw-bold mb-0">Dashboard</h2>
+                <p class="text-muted small">Acompanhamento geral do sistema</p>
+            </div>
+
+            <div class="row g-3 mb-4">
+                <div class="col-md-3">
+                    <div class="card custom-card p-3 position-relative border-0 shadow-sm">
+                        <i class="bi bi-cloud-leaf position-absolute top-0 end-0 m-3 text-success fs-4 opacity-50"></i>
+                        <h6 class="text-muted small fw-bold">KG Salvos</h6>
+                        <h3 class="fw-bold mb-1 text-success" id="dash-kg">0 kg</h3>
+                        <small class="text-muted" style="font-size: 0.7rem;">Peso total dos lotes concluídos</small>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card custom-card p-3 position-relative border-0 shadow-sm">
+                        <i class="bi bi-box-seam position-absolute top-0 end-0 m-3 text-primary fs-4 opacity-50"></i>
+                        <h6 class="text-muted small fw-bold">Disponíveis</h6>
+                        <h3 class="fw-bold mb-1" id="dash-lotes">0</h3>
+                        <small class="text-muted" style="font-size: 0.7rem;">Lotes visíveis na vitrine</small>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card custom-card p-3 position-relative border-0 shadow-sm">
+                        <i class="bi bi-cart-check position-absolute top-0 end-0 m-3 text-warning fs-4 opacity-50"></i>
+                        <h6 class="text-muted small fw-bold">Reservados</h6>
+                        <h3 class="fw-bold mb-1" id="dash-reservados">0</h3>
+                        <small class="text-muted" style="font-size: 0.7rem;">Aguardando retirada</small>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card custom-card p-3 position-relative border-0 shadow-sm">
+                        <i class="bi bi-check-circle position-absolute top-0 end-0 m-3 text-info fs-4 opacity-50"></i>
+                        <h6 class="text-muted small fw-bold">Concluídos</h6>
+                        <h3 class="fw-bold mb-1 text-info" id="dash-concluidos">0</h3>
+                        <small class="text-muted" style="font-size: 0.7rem;">Lotes já retirados com sucesso</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card custom-card p-4 border-0 shadow-sm">
+                <h6 class="fw-bold mb-1">Impacto Ambiental Recente</h6>
+                <p class="text-muted small mb-4">Progresso de redução de desperdício em tempo real</p>
+                
+                <div class="d-flex align-items-center justify-content-center py-4 bg-light rounded-3 border">
+                    <div class="text-center">
+                        <i class="bi bi-tree text-success mb-2" style="font-size: 3rem;"></i>
+                        <h5 class="fw-bold mt-2">A economia circular está em ação!</h5>
+                        <p class="text-muted small mb-0">Cada transação concluída ajuda a reduzir as perdas pós-colheita.</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
