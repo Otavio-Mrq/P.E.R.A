@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function() {
             usuarios.push({ nome, email, senha });
             localStorage.setItem('usuariosPERA', JSON.stringify(usuarios));
             alert("Conta criada com sucesso! Podes fazer login.");
-            window.location.href = 'login.html';
+            window.location.href = 'index.html';
         });
     }
 
